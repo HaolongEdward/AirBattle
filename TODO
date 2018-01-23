@@ -1,0 +1,18 @@
+Game Routine
+
+Core
+	AI
+		//later
+	data structures
+		cell
+			color, teleport
+		game Board
+			linearly combined cells
+			// for gui shit
+		Aircraft
+			position(index), color
+		player/AI info
+			set of 4 aircrafts 
+		
+GUI
+	//cmd gui, the best gui
