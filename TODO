@@ -5,10 +5,12 @@ Core
 		//later
 	data structures
 		cell
-			color, teleport
+			color, teleport (two method required)
 		game Board
-			linearly combined cells
-			// for gui shit
+			combined cells
+			one board for outer side battle ground
+			one board for inner side
+			// gui updates
 		Aircraft
 			position(index), color
 		player/AI info
