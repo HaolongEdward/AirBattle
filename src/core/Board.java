@@ -3,6 +3,7 @@ package core;
 public class Board {
 	protected Cell[] battleField;
 	protected int size; 
+	protected Player[] players;
 	/**
 	 * Initialize the game board 
 	 * @param size Use to extend the game, default is 4. 
@@ -26,12 +27,16 @@ public class Board {
 			battleField[jumpLocationIndex].setBigJump();
 			jumpLocationIndex = jumpLocationIndex+3*size+1;
 		}
+		
 		//initialize the endPoint
+		//!!!!!!warning!!!!!!!!! player number not tested!!!
 		int endPointLocation = size*2+1;
-		for(int i = 0; i<4; i++){
-			
+		int startPointLocation = 0;
+		for(int i = 0; i<size; i++){
+			this.players[i] = new Player(size, startPointLocation, endPointLocation );
 			battleField[endPointLocation].setEndPoint();
 			endPointLocation += endPointLocation;
+			startPointLocation += size*3+1;
 		}
 		
 	}
